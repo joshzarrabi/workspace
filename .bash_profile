@@ -5,6 +5,8 @@ function main() {
     alias vim="nvim"
     alias vi="nvim"
     alias ll="ls -al"
+    alias sl="ls"
+    alias gst="git st"
   }
 
   function setup_environment() {
@@ -22,6 +24,8 @@ function main() {
     export EDITOR="nvim"
 
     export CLOUDSDK_PYTHON="/usr/local/opt/python@3.8/bin/python3"
+
+    ssh-add ~/work/poop
 
     function _bgjobs() {
       local count
@@ -120,6 +124,11 @@ function reload() {
   source "${HOME}/.bash_profile"
 }
 
+function pullify() {
+  git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*'
+  git fetch
+}
+
 function reinstall() {
   local workspace
   workspace="${HOME}/workspace/ryanmoran/workspace"
@@ -150,3 +159,9 @@ function update::workspace() {
 
 main
 unset -f main
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Applications/google-cloud-sdk/path.bash.inc' ]; then . '/Applications/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Applications/google-cloud-sdk/completion.bash.inc' ]; then . '/Applications/google-cloud-sdk/completion.bash.inc'; fi

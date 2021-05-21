@@ -34,7 +34,6 @@ brew 'wget'
 brew 'yq'
 
 cask 'docker'
-cask 'firefox'
 cask 'flycut'
 cask 'iterm2'
 cask 'spectacle'

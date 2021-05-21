@@ -14,7 +14,5 @@
 [diff]
   compactionHeuristic = true
 [user]
-  email = ryan.moran@gmail.com
-  name = Ryan Moran
-[fetch]
-  prune = true
+  email = joshnzarrabi@gmail.com
+  name = Josh Zarrabi

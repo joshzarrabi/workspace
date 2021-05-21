@@ -13,6 +13,9 @@ Plug 'dense-analysis/ale'      " Linting
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
 Plug 'cespare/vim-toml'
 Plug 'airblade/vim-gitgutter'
+Plug 'leafgarland/typescript-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 
 call plug#end()
